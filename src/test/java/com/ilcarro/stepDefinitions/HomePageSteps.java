@@ -23,17 +23,4 @@ public class HomePageSteps {
     public void verify_HomePage_title() {
         new HomePage(driver).isHomePageTitleDisplayed();
     }
-
-    @Then("User verifies user is logged in")
-    public void userVerifiesUserIsLoggedIn() {
-        HomePage homePage = new HomePage(driver);
-        boolean isLoggedIn = homePage.isUserLoggedIn();
-        if (isLoggedIn) {
-            System.out.println("User is successfully logged in.");
-        } else {
-            System.err.println("Login verification failed! User is not logged in.");
-        }
-        assert isLoggedIn : "User is not logged in!";
-    }
-
 }

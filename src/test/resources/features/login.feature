@@ -8,3 +8,4 @@ Feature: Login
     And User enters valid data
     And User clicks on Yalla button
     Then User verifies Success message is displayed
+    And User closes the success modal

@@ -16,7 +16,7 @@ public class LoginSteps {
 
     @And("User enters valid data")
     public void enter_valid_data() {
-        new LoginPage(driver).enterData("romaykin@gmail.com","srCQcpLftyEFR5q$");
+        new LoginPage(driver).enterData("romaykin@gmail.com", "srCQcpLftyEFR5q$");
     }
 
     @And("User clicks on Yalla button")
@@ -27,5 +27,10 @@ public class LoginSteps {
     @Then("User verifies Success message is displayed")
     public void verify_Success_message() {
         new LoginPage(driver).isSuccessTextPresent("Logged in success");
+    }
+
+    @And("User closes the success modal")
+    public void close_success_modal() {
+        new LoginPage(driver).closeSuccessModalByCoordinates();
     }
 }

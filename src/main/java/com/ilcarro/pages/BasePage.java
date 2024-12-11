@@ -1,6 +1,5 @@
 package com.ilcarro.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,15 +36,6 @@ public class BasePage {
             click(element);
             element.clear();
             element.sendKeys(text);
-        }
-    }
-
-    public WebElement findElementByCss(String cssSelector) {
-        try {
-            return driver.findElement(By.cssSelector(cssSelector));
-        } catch (NoSuchElementException e) {
-            System.err.println("Element not found using CSS Selector: " + cssSelector);
-            throw e; // Логируйте и выбрасывайте исключение для отладки
         }
     }
 
